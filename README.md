@@ -1,4 +1,4 @@
-# Reaperpy0's Scientific Calculator
+# Reaperpy0's Calculator
 Features:
 * Multiplication
 * Addition
