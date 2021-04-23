@@ -38,3 +38,7 @@ Small Changes
 # 4/23/2021
 New Features
 * Square root function in GUI version
+
+Bug Fixes
+* OverflowError fixed in GUI version
+* ValueError fixed in GUI version

@@ -25,18 +25,23 @@ def calcAdd():
   calc_input.delete(0, END)
 
 def calcEqual():
-  second_num = calc_input.get()
-  calc_input.delete(0, END)
-  if opers == "add":
-    calc_input.insert(0, first_num + int(second_num))
-  elif opers == "subtract":
-    calc_input.insert(0, first_num - int(second_num))
-  elif opers == "multiply":
-    calc_input.insert(0, first_num * int(second_num))
-  elif opers == "divide":
-    calc_input.insert(0, first_num / int(second_num))
-  elif opers == "sqrt":
-    calc_input.insert(0, math.sqrt(first_num))
+  try:
+    second_num = calc_input.get()
+    calc_input.delete(0, END)
+    if opers == "add":
+      calc_input.insert(0, first_num + int(second_num))
+    elif opers == "subtract":
+      calc_input.insert(0, first_num - int(second_num))
+    elif opers == "multiply":
+      calc_input.insert(0, first_num * int(second_num))
+    elif opers == "divide":
+      calc_input.insert(0, first_num / int(second_num))
+    elif opers == "sqrt":
+      calc_input.insert(0, math.sqrt(first_num))
+  except ValueError:
+    calc_input.insert(0, "Please enter a valid value.")
+  except OverflowError:
+    calc_input.insert(0, "That number is too large to calculate!")
 
 def calcSubtract():
   global opers
