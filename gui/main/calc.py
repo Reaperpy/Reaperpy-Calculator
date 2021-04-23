@@ -1,7 +1,7 @@
 from tkinter import *
 
 root = Tk()
-root.title("Reaperpy0's Scientific Calculator (GUI Version)")
+root.title("Reaperpy0's Calculator (GUI Version)")
 
 calc_input = Entry(width=25)
 
