@@ -8,4 +8,4 @@ Features:
 * Operations can be done in more than two numbers (terminal only)
 * History (terminal only)
 * Random (terminal only)
-* Integer and floating point inputs
+* Integer and floating point inputs (only integer inputs in GUI)
