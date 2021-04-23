@@ -42,3 +42,4 @@ New Features
 Bug Fixes
 * OverflowError fixed in GUI version
 * ValueError fixed in GUI version
+* Fatal error handling
