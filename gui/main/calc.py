@@ -38,6 +38,8 @@ def calcEqual():
       calc_input.insert(0, first_num / int(second_num))
     elif opers == "sqrt":
       calc_input.insert(0, math.sqrt(first_num))
+    elif opers == "expo":
+      calc_input.insert(0, first_num ** int(second_num))
   except ValueError:
     calc_input.insert(0, "Please enter a valid value.")
   except OverflowError:
@@ -75,6 +77,14 @@ def calcSqrt():
   first_num = int(first_number)
   calc_input.delete(0, END)
 
+def calcExpo():
+  global opers
+  opers = "expo"
+  first_number = calc_input.get()
+  global first_num
+  first_num = int(first_number)
+  calc_input.delete(0, END)
+
 
 button_1 = Button(padx=30, pady=20, text="1", command=lambda: calcClick(1))
 button_2 = Button(padx=30, pady=20, text="2", command=lambda: calcClick(2))
@@ -93,6 +103,7 @@ button_subtract = Button(padx=30, pady=20, text="-", command=calcSubtract)
 button_multiply = Button(padx=30, pady=20, text="x", command=calcMultiply)
 button_divide = Button(padx=30, pady=20, text="/", command=calcDivide)
 button_sqrt = Button(padx=30, pady=20, text="√", command=calcSqrt)
+button_expo = Button(padx=30, pady=20, text="^", command=calcExpo)
 
 calc_input.grid(row=0, column=0, columnspan=40)
 button_1.grid(row=1, column=0)
@@ -112,5 +123,6 @@ button_subtract.grid(row=5, column=0)
 button_multiply.grid(row=5, column=1)
 button_divide.grid(row=5, column=2)
 button_sqrt.grid(row=6, column=0)
+button_expo.grid(row=6, column=1)
 
 root.mainloop()
