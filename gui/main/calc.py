@@ -1,5 +1,6 @@
 from tkinter import *
 import math
+import time
 
 root = Tk()
 root.title("Reaperpy0's Calculator (GUI Version)")
@@ -40,6 +41,10 @@ def calcEqual():
       calc_input.insert(0, math.sqrt(first_num))
     elif opers == "expo":
       calc_input.insert(0, first_num ** int(second_num))
+    else:
+      calc_input.insert(0, "A fatal error has occurred. Please submit a bug report or pull request on the GitHub repo if you see this message. The app will close in 5 seconds.")
+      time.sleep(5)
+      quit()
   except ValueError:
     calc_input.insert(0, "Please enter a valid value.")
   except OverflowError:
