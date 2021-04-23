@@ -3,7 +3,6 @@
 Done
 
 * Terminal version with all currently planned features
-
+* GUI Version (with 4 basic operations)
 To-do
-
-* GUI version 
+* New operations in GUI version

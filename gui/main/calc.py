@@ -1,4 +1,5 @@
 from tkinter import *
+import math
 
 root = Tk()
 root.title("Reaperpy0's Calculator (GUI Version)")
@@ -34,6 +35,8 @@ def calcEqual():
     calc_input.insert(0, first_num * int(second_num))
   elif opers == "divide":
     calc_input.insert(0, first_num / int(second_num))
+  elif opers == "sqrt":
+    calc_input.insert(0, math.sqrt(first_num))
 
 def calcSubtract():
   global opers
@@ -59,6 +62,14 @@ def calcDivide():
   first_num = int(first_number)
   calc_input.delete(0, END)
 
+def calcSqrt():
+  global opers 
+  opers = "sqrt"
+  first_number = calc_input.get()
+  global first_num
+  first_num = int(first_number)
+  calc_input.delete(0, END)
+
 
 button_1 = Button(padx=30, pady=20, text="1", command=lambda: calcClick(1))
 button_2 = Button(padx=30, pady=20, text="2", command=lambda: calcClick(2))
@@ -76,6 +87,7 @@ button_add = Button(padx=30, pady=20, text="+", command=calcAdd)
 button_subtract = Button(padx=30, pady=20, text="-", command=calcSubtract)
 button_multiply = Button(padx=30, pady=20, text="x", command=calcMultiply)
 button_divide = Button(padx=30, pady=20, text="/", command=calcDivide)
+button_sqrt = Button(padx=30, pady=20, text="√", command=calcSqrt)
 
 calc_input.grid(row=0, column=0, columnspan=40)
 button_1.grid(row=1, column=0)
@@ -90,9 +102,10 @@ button_9.grid(row=3, column=2)
 button_0.grid(row=4, column=0)
 button_c.grid(row=4, column=1)
 button_add.grid(row=4, column=2)
-button_equal.grid(row=6, column=0, columnspan=3)
+button_equal.grid(row=7, column=0, columnspan=3)
 button_subtract.grid(row=5, column=0)
 button_multiply.grid(row=5, column=1)
 button_divide.grid(row=5, column=2)
+button_sqrt.grid(row=6, column=0)
 
 root.mainloop()

@@ -24,4 +24,17 @@ Bug Fixes
 
 # 4/22/2021
 New Features
-* GUI version (work in progress)
+* GUI version
+* All 4 operations in GUI version
+New Files
+* gui folder
+* main folder
+* calc.py (GUI)
+* todo.md
+Small Changes
+* GitHub repo
+* Title changed (again)
+
+# 4/23/2021
+New Features
+* Square root function in GUI version
