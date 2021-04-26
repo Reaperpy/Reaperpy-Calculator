@@ -44,6 +44,6 @@ Bug Fixes
 * ValueError fixed in GUI version
 * Fatal error handling in GUI
 
-# 4/25/2021
+# 4/26/2021
 New Features
 * Floating point inputs in GUI version
