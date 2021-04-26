@@ -47,8 +47,12 @@ def calcEqual():
       quit()
   except ValueError:
     calc_input.insert(0, "Please enter a valid value.")
+    time.sleep(5)
+    calc_input.delete(0, END)
   except OverflowError:
     calc_input.insert(0, "That number is too large to calculate!")
+    time.sleep(5)
+    calc_input.delete(0, END)
 
 def calcSubtract():
   global opers
