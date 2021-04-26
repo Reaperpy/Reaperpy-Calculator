@@ -39,7 +39,7 @@ while True:
     else:
       print("I don't know that command.")
   except ValueError:
-    print("Please enter an integer value.")
+    print("Please enter an integer or float value.")
   except OverflowError:
     print("The result is too large to calculate!")
     rand.random()
